@@ -1,16 +1,23 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D4HNRE91LQ"></script>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js): loaded only after the visitor accepts analytics cookies (see /consent.js) -->
 <script>
+  window.GA_ID = 'G-D4HNRE91LQ';
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D4HNRE91LQ');
+  window.loadAnalytics = function () {
+    if (window.gaLoaded) return; window.gaLoaded = true;
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_ID;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', window.GA_ID);
+  };
+  try { if (localStorage.getItem('pt-consent') === 'granted') window.loadAnalytics(); } catch (e) {}
 </script>
-<meta charset="utf-8">
+<script src="/consent.js" defer></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Padel Balls vs Tennis Balls: Key Differences and Lifespan</title>
 <meta name="description" content="Are padel balls the same as tennis balls? The differences in size and pressure, whether you can use tennis balls for padel, and how to tell when padel balls are dead.">
@@ -67,7 +74,7 @@
 <div><h3>Gear guides</h3><ul><li><a href="/best-padel-rackets/">Best padel rackets</a></li><li><a href="/best-padel-shoes/">Best padel shoes</a></li><li><a href="/padel-eye-protection/">Padel eye protection</a></li><li><a href="/best-padel-balls/">Best padel balls</a></li></ul></div>
 <div><h3>Gear advice</h3><ul><li><a href="/padel-racket-shapes/">Racket shapes explained</a></li><li><a href="/best-padel-rackets-for-beginners/">Rackets for beginners</a></li><li><a href="/padel-elbow/">Padel elbow</a></li><li><a href="/running-shoes-for-padel/">Running shoes for padel?</a></li><li><a href="/herringbone-vs-omni-padel-soles/">Herringbone vs omni soles</a></li><li><a href="/padel-eye-injuries/">Do you need eye protection?</a></li><li><a href="/playing-padel-with-glasses/">Playing padel with glasses</a></li><li><a href="/padel-balls-vs-tennis-balls/">Padel vs tennis balls</a></li><li><a href="/first-padel-kit/">Your first padel kit</a></li></ul></div>
 <div><h3>Padel tips</h3><ul><li><a href="/padel-rules-for-beginners/">Padel rules for beginners</a></li><li><a href="/how-to-play-off-the-glass/">How to play off the glass</a></li><li><a href="/padel-serve-rules/">Padel serve rules</a></li></ul></div>
-<div><h3>Padel Tips</h3><ul><li><a href="/about/">About &amp; editorial policy</a></li><li><a href="/about/#disclosure">Affiliate disclosure</a></li><li><a href="/privacy/">Privacy</a></li></ul></div>
+<div><h3>Padel Tips</h3><ul><li><a href="/about/">About &amp; editorial policy</a></li><li><a href="/about/#disclosure">Affiliate disclosure</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/privacy/#cookies" data-cookie-settings>Cookie settings</a></li></ul></div>
 </div>
 <p class="small">As an Amazon Associate, Padel Tips earns from qualifying purchases. Prices and availability change, so check Amazon for current details. Homepage photo from <a href="https://www.pexels.com/photo/aerial-view-of-paddle-tennis-match-in-johannesburg-37674932/" rel="noopener">Pexels</a>; other photos from Unsplash. Used under the Pexels and Unsplash licences. &copy; 2026 Padel Tips.</p>
 </div></footer>
