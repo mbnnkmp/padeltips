@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://padeltips.co.uk/sitemap.xml
